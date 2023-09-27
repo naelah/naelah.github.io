@@ -1,87 +1,90 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Naelah Nordin CV
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Naelah Nordin
+Data Scientist
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="naelahnordin@gmail.com">naelahnordin@gmail.com</a>
+<br><a href="https://naelahnordin.com">www.naelahnordin.com</a>
+<br>Shah Alam, Selangor, Malaysia
 </div>
 
 
 ## Currently
 
-Standing on the shoulders of giants
+Data Scientist for Kestrl Tech
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+Data Science, NLP, Transformers, LLM, multi-label categorization, islamic fintech, data visualization
 
 
-### Research interests
+### Skills
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
+Python, R, Java, Ruby on Rails, MySql, AWS, SPSS Modeler, Adobe Illustrator, Tableau, Power BI, Selenium, D3.js
 
+## Experience
+
+`2020 - now`
+__Data Scientist, Kestrl Tech__
+- develop and train models for classifications of bank transactions using python
+
+`2016 - 2019`
+__Software Developer, Arche Information__
+
+- develop web application and mobile application using Java, iOs, Ruby on Rails and Python
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`2019-2020`
+__Msc Data Science, UiTM__
+- CGPA 3.9/4.0
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+`2012-2016`
+__Bsc Computer Science, IIUM__
+- CGPA 3.6/4.0
+- Valedictorian
 
-- Sizar
+## Certificate
 
-`1667 - death`
-__Trinity College, Cambridge__
+`2020`
+Machine Learning Professional, *Rapidminer*
 
-- Fellow
-
+`2020`
+Application & Use Case Professional, *Rapidminer*
 
 
 ## Awards
 
-`2012`
-President, *Royal Society*, London, UK
+`2020`
+Msc Data Science __Scholarship Recipient__, Yayasan Bank Rakyat
 
-Associate, *French Academy of Science*, Paris, France
+`2016`
+ __Best Student(Overall)__, KICT, IIUM
+
+`2015`
+University & National level, __Competitive Programming participant__, ACM-ICPC
+
+`2012-2016`
+__Dean's list__, 5 semesters
+
+`2015`
+Community service __Bronze medal__
+
 
 
 
 ## Publications
 
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
+
 
 ### Journals
 
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
-
-
-## Occupation
-
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
-
+`2020`
+__Gender Representation of 20 years Malaysian Films based on Andy Kirk Dynamic Visualization Framework__
+Mathematical Sciences and Informatics Journal, [S.l.], p. 15-25, nov. 2021. ISSN 2735-0703. Available at: <https://myjms.mohe.gov.my/index.php/mij/article/view/13909>. doi: <https://doi.org/10.24191/mij.v2i2.13909>.
 
 
 <!-- ### Footer
