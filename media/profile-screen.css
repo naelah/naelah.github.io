@@ -1,0 +1,397 @@
+:root {
+  --paper: #f3f1ec;
+  --ink: #1c1c1c;
+  --blue: #1a4e9c;
+  --col-side: 168px;
+  --col-mid: 230px;
+  --col-profile: 280px;
+  --col-title: 15rem;
+  --col-gap: 32px;
+  --rule: 1px solid var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+h1, h2, h3, p, ul, figure, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+#main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 56px 48px 72px;
+}
+
+.cv-header,
+.cv-section {
+  display: grid;
+  grid-template-columns: var(--col-side) var(--col-mid) minmax(0, 1fr);
+  column-gap: var(--col-gap);
+  align-items: start;
+}
+
+.cv-header {
+  grid-template-columns: var(--col-side) var(--col-mid) var(--col-profile);
+  padding-bottom: 28px;
+  margin-bottom: 26px;
+  border-bottom: var(--rule);
+}
+
+.identity h1 {
+  font-family: Garamond, "EB Garamond", Palatino, serif;
+  color: var(--blue);
+  font-size: 2.35rem;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.identity h1 span {
+  display: block;
+}
+
+.role {
+  margin-top: 16px;
+  font-family: "GT America", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact {
+  margin-top: 12px;
+  font-family: Garamond, "EB Garamond", Palatino, serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.download:hover {
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.download:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  background: #d8d4cc;
+}
+
+.profile h2,
+.cv-section > h2 {
+  font-family: "GT America", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.profile {
+  width: 280px;
+  max-width: 280px;
+}
+
+.profile h2 {
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-family: Garamond, "EB Garamond", Palatino, serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.profile p + p {
+  margin-top: 0.75em;
+}
+
+.cv-section {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: var(--rule);
+}
+
+.cv-section:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.entries,
+.skill-board {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.entries {
+  display: block;
+}
+
+article {
+  display: grid;
+  grid-template-columns: var(--col-title) minmax(0, 1fr);
+  column-gap: var(--col-gap);
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+article:has(.when),
+article:has(.years) {
+  grid-template-columns: var(--col-title) minmax(0, 1fr) max-content;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+.meta h3 {
+  font-family: Garamond, "EB Garamond", Palatino, serif;
+  color: var(--blue);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.meta h3.plain {
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.meta p {
+  font-family: Garamond, "EB Garamond", Palatino, serif;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.body p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.meta p + p {
+  margin-top: 1px;
+}
+
+.body p + p {
+  margin-top: 0.7em;
+}
+
+.body ul {
+  margin: 0;
+  padding: 0;
+}
+
+.body li {
+  list-style: disc;
+  margin-left: 1.05em;
+  margin-bottom: 0.35em;
+}
+
+.body li:last-child {
+  margin-bottom: 0;
+}
+
+.body ul + p,
+.body p + .facts,
+.body ul + .facts,
+.project-shot + .facts {
+  margin-top: 0.75em;
+}
+
+.meta .project-shot {
+  margin: 0.75em 0 0;
+}
+
+.project-shot img {
+  display: block;
+  width: 168px;
+  max-width: 100%;
+  height: auto;
+}
+
+.tech span {
+  font-weight: 700;
+  margin-right: 0.35em;
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: 4.6rem minmax(0, 1fr);
+  column-gap: 10px;
+  margin-top: 0.15em;
+}
+
+.facts dt {
+  font-weight: 700;
+}
+
+h3.group {
+  grid-column: 1 / -1;
+  margin: 10px 0 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h3.group:first-child {
+  margin-top: 0;
+}
+
+.skill-board {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  column-gap: var(--col-gap);
+  align-items: start;
+}
+
+.skill-board h3 {
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.body a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+
+.when,
+.years {
+  text-align: right;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.years span {
+  display: inline;
+}
+
+.years span + span {
+  margin-left: 0.35em;
+}
+
+.skills {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.skills li {
+  break-inside: avoid;
+  list-style: disc;
+  margin-left: 1.05em;
+  margin-bottom: 0.2em;
+}
+
+@media (max-width: 720px) {
+  #main {
+    padding: 32px 20px 48px;
+  }
+
+  .cv-header,
+  .cv-section,
+  .entries,
+  article,
+  article:has(.when),
+  article:has(.years),
+  .skill-board {
+    display: block;
+  }
+
+  .identity h1 {
+    font-size: 2.4rem;
+  }
+
+  .portrait {
+    width: 168px;
+    margin: 22px 0;
+  }
+
+  .cv-section > h2 {
+    margin-bottom: 12px;
+  }
+
+  article {
+    margin-bottom: 20px;
+  }
+
+  .years {
+    margin-bottom: 6px;
+  }
+
+  .skill-board > div + div {
+    margin-top: 16px;
+  }
+
+  h3.group {
+    margin-top: 8px;
+  }
+}

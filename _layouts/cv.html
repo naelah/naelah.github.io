@@ -1,15 +1,67 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset=utf-8 />
-  <title> {% if page.title %} {{ page.title }} | {% endif %} CV</title>
-  <link href="media/{{ site.style }}-screen.css" type="text/css" rel="stylesheet" media="screen">
-  <link href="media/{{ site.style }}-print.css" type="text/css" rel="stylesheet" media="print">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}CV{% endif %}</title>
+  <link rel="icon" href="media/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="media/favicon_io/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="media/profile-screen.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="media/profile-print.css" type="text/css" rel="stylesheet" media="print">
 </head>
 <body>
   <div id="main">
+    <header class="cv-header">
+      <div class="identity">
+        <h1>
+          {% assign name_parts = page.full_name | default: page.title | split: " " %}
+          {% for part in name_parts %}
+          <span>{{ part }}</span>
+          {% endfor %}
+        </h1>
+        {% if page.role %}
+        <p class="role">{{ page.role }}</p>
+        {% endif %}
+        <ul class="contact">
+          {% if page.phone %}
+          <li><a href="tel:{{ page.phone | replace: ' ', '' }}">{{ page.phone }}</a></li>
+          {% endif %}
+          {% if page.email %}
+          <li><a href="mailto:{{ page.email }}">{{ page.email }}</a></li>
+          {% endif %}
+          {% if page.website %}
+          <li><a href="{{ page.website }}">{{ page.website_label | default: page.website }}</a></li>
+          {% endif %}
+          {% if page.location %}
+          <li>{{ page.location }}</li>
+          {% endif %}
+        </ul>
+        {% if page.pdf %}
+        <a class="download" href="{{ page.pdf }}" download>Download PDF</a>
+        {% else %}
+        <button type="button" class="download" onclick="window.print()">Download PDF</button>
+        {% endif %}
+      </div>
+      {% if page.photo %}
+      <figure class="portrait">
+        <img src="{{ page.photo }}" alt="{{ page.photo_alt | default: page.full_name }}">
+      </figure>
+      {% endif %}
+      {% if page.profile %}
+      <div class="profile">
+        <h2>{{ page.profile_heading | default: "Profile" }}</h2>
+        {{ page.profile | markdownify }}
+      </div>
+      {% endif %}
+    </header>
     <div id="content">
-    {{ content }}
+      {{ content }}
     </div>
   </div>
 </body>

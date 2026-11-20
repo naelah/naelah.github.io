@@ -1,0 +1,187 @@
+@import "profile-screen.css";
+
+@page {
+  size: A4;
+  margin: 24mm 14mm 26mm;
+}
+
+:root {
+  --col-side: 28mm;
+  --col-mid: 28mm;
+  --col-profile: 280px;
+  --col-title: 28mm;
+  --col-when: 32mm;
+  --col-gap: 3.5mm;
+}
+
+html {
+  font-size: 10.5px;
+}
+
+body {
+  background: var(--paper);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+#main {
+  max-width: none;
+  /* Keeps an inset when the print dialog sets page margins to none. */
+  padding: 6mm 8mm 8mm;
+}
+
+.identity h1 {
+  font-size: 2.15rem;
+}
+
+.download {
+  display: none !important;
+}
+
+.cv-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30mm var(--col-profile);
+  column-gap: 4mm;
+  align-items: start;
+  padding-bottom: 3mm;
+  margin-bottom: 3.5mm;
+}
+
+.profile {
+  width: 280px;
+  max-width: 280px;
+}
+
+/* Block layout so a section can split across pages instead of jumping. */
+.cv-section {
+  display: block;
+  break-inside: auto;
+}
+
+.cv-section > h2 {
+  float: left;
+  width: var(--col-side);
+  margin: 0;
+}
+
+.cv-section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.entries,
+.skill-board {
+  display: block;
+  margin-left: calc(var(--col-side) + var(--col-gap));
+  min-width: 0;
+}
+
+article,
+article:has(.when),
+article:has(.years) {
+  display: grid;
+  grid-template-columns: var(--col-title) minmax(0, 1fr);
+  column-gap: var(--col-gap);
+  align-items: start;
+}
+
+article:has(.when),
+article:has(.years) {
+  grid-template-columns: var(--col-title) minmax(0, 1fr) var(--col-when);
+}
+
+.meta,
+.body,
+.when,
+.years,
+.project-shot {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.portrait {
+  width: 30mm;
+  max-width: 30mm;
+  margin: 0;
+}
+
+.portrait img {
+  width: 30mm;
+  height: 38mm;
+  max-width: 30mm;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-shot {
+  width: 28mm;
+  margin: 2mm 0 0;
+}
+
+.project-shot img {
+  width: 28mm;
+  max-width: 28mm;
+  height: auto;
+}
+
+.skill-board {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  column-gap: var(--col-gap);
+}
+
+h3.group {
+  grid-column: 1 / -1;
+}
+
+.facts div {
+  grid-template-columns: 3.4rem minmax(0, 1fr);
+}
+
+.when,
+.years {
+  text-align: right;
+  white-space: nowrap;
+  margin: 0;
+  justify-self: end;
+}
+
+.years span {
+  display: inline;
+}
+
+.cv-section {
+  padding-bottom: 2.5mm;
+  margin-bottom: 2.5mm;
+}
+
+article {
+  margin-bottom: 2.2mm;
+}
+
+.meta h3 {
+  margin-bottom: 1px;
+}
+
+.body li {
+  margin-bottom: 0.12em;
+}
+
+.cv-section.projects {
+  break-before: page;
+  page-break-before: always;
+}
+
+.cv-header,
+article {
+  break-inside: avoid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body a {
+  text-decoration: underline;
+}
