@@ -139,7 +139,7 @@ profile: |
   </div>
 </section>
 
-<section class="cv-section">
+<section class="cv-section skills">
   <h2>Skills</h2>
   <div class="skill-board">
     <div>

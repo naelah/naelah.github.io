@@ -375,6 +375,11 @@ h3.group:first-child {
     margin: 22px 0;
   }
 
+  .profile {
+    width: auto;
+    max-width: 100%;
+  }
+
   .cv-section > h2 {
     margin-bottom: 12px;
   }
